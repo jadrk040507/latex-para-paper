@@ -1,15 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "LaTeX para Paper",
-  "version": "0.4.5",
-  "description": "LaTeX typing shortcuts inside Dropbox Paper equations.",
+  "name": "LaTeX Shortcuts",
+  "version": "0.5.0",
+  "description": "Write LaTeX faster in Dropbox Paper with keyboard shortcuts.",
   "permissions": [
     "activeTab",
     "scripting",
     "storage"
   ],
   "action": {
-    "default_title": "LaTeX para Paper",
+    "default_title": "LaTeX Shortcuts",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icon-16.png",

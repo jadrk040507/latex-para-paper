@@ -2,7 +2,7 @@
 
 Firefox extension for writing LaTeX equations quickly in Dropbox Paper. It adapts the shortcut catalog from [Obsidian LaTeX Suite](https://github.com/artisticat1/obsidian-latex-suite) to Paper’s native equation editor. Independent project; not affiliated with Dropbox or Obsidian.
 
-**Status:** public beta candidate, version 0.4.5. Designed for desktop Firefox and `www.dropbox.com`. Google Docs is not supported yet. Please report compatibility problems through GitHub Issues.
+**Status:** public beta candidate, version 0.5.0. Designed for desktop Firefox and `www.dropbox.com`. Google Docs is not supported yet. Please report compatibility problems through GitHub Issues.
 
 ## Install
 

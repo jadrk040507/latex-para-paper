@@ -1,20 +1,12 @@
-# Instalar permanentemente en Firefox
+# Publish and install in Firefox
 
-Firefox estable necesita una firma de Mozilla para una instalación permanente. La carga temporal en about:debugging se elimina al reiniciar Firefox.
+Regular Firefox requires a Mozilla-signed add-on. To publish this extension for everyone, submit it as a **listed** add-on on Firefox Add-ons (AMO).
 
-1. Entra en https://addons.mozilla.org/developers/ con tu cuenta Mozilla.
-2. Elige enviar un complemento nuevo y distribución **On this site / En este sitio** para publicarlo en Firefox Add-ons. La distribución **On your own** sirve para compartirlo fuera del catálogo; no es el objetivo del lanzamiento público.
-3. Sube `latex-para-paper-VERSION-unsigned.zip` de `dist/releases`.
-4. Cuando pregunte por el código fuente, sube `latex-para-paper-VERSION-source.zip`. Las instrucciones de compilación están incluidas.
-5. Completa la ficha pública usando `AMO_LISTING.md`, añade capturas reales y los datos del autor y soporte. Revisa personalmente cualquier acuerdo de desarrollador que Mozilla solicite. Completa el envío y espera el resultado de Mozilla.
-6. Cuando esté disponible la ficha pública, instala desde Firefox Add-ons y permite acceso a Dropbox. También puedes instalar el `.xpi` firmado mediante about:addons → engranaje → Instalar complemento desde archivo.
-7. Comprueba que la extensión sigue instalada tras cerrar y abrir Firefox.
+1. Sign in at https://addons.mozilla.org/developers/.
+2. Create API credentials at https://addons.mozilla.org/developers/addon/api/key/. Keep the API secret private; never commit it or paste it into chat.
+3. Build the extension and source archives with `npm run build:probe && npm run package:release`.
+4. Submit the listed package with the metadata in `docs/release/amo-metadata.json`, or use the AMO submission page. Upload the matching source archive when prompted.
+5. Complete the public listing using `AMO_LISTING.md`, review Mozilla’s developer agreement, and submit for review.
+6. After Mozilla approves the listing, install it from its Firefox Add-ons page. Firefox will deliver signed updates automatically.
 
-El ID se conserva respecto a la versión temporal para mantener la identidad del complemento. No cambies el nombre del ZIP a XPI para intentar evitar la firma: eso no lo firma. No es necesario reducir la seguridad de Firefox.
-
-Antes de enviar la versión 0.4.0, confirmar mk/dm en Paper real. El paquete está preparado para firma, pero no es una afirmación de firma o instalación ya realizadas.
-
-Fuentes oficiales:
-- https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/
-- https://extensionworkshop.com/documentation/publish/submitting-an-add-on/
-- https://extensionworkshop.com/documentation/publish/install-self-distributed/
+A ZIP renamed to `.xpi` is not signed. Unsigned builds only install temporarily in `about:debugging`.

@@ -1,25 +1,25 @@
 <!doctype html>
-<html lang="es">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LaTeX para Paper</title><link rel="stylesheet" href="popup.css"></head>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LaTeX</title><link rel="stylesheet" href="popup.css"></head>
 <body>
-<header><div class="identity"><img class="brand-icon" src="icon.svg" alt="" aria-hidden="true"><div><h1>LaTeX</h1><p class="brand-caption">Menos teclas. Más ideas.</p></div></div></header>
+<header><img class="brand-icon" src="icon.svg" alt=""><h1>LaTeX</h1></header>
 <main>
-<section class="state-card" data-state="loading" id="state-card" aria-live="polite">
-<div class="state-heading"><span class="state-dot" aria-hidden="true"></span><h2 id="status">Comprobando estado…</h2></div>
-<p id="status-detail">Un momento.</p>
-<button id="permission" class="primary" type="button" hidden>Permitir acceso a Dropbox</button>
-<button id="connect" class="primary" type="button" hidden>Conectar esta pestaña <span aria-hidden="true">↗</span></button>
+<h2 class="section-title">Quick Settings</h2>
+<section class="controls" aria-label="Quick Settings">
+<label class="control-row" for="enabled"><span>Shortcuts</span><input id="enabled" class="switch" type="checkbox" role="switch" disabled></label>
+<label class="control-row" for="paper-enabled"><span>Dropbox Paper</span><input id="paper-enabled" class="switch" type="checkbox" role="switch" disabled></label>
 </section>
-<section class="controls" aria-label="Activación">
-<label class="control-row" for="enabled"><span><strong>Activar extensión</strong><small>Expansión automática</small></span><input id="enabled" class="switch" type="checkbox" role="switch" disabled></label>
-<label class="control-row" for="paper-enabled"><span><strong>Usar en Dropbox Paper</strong><small>Preferencia para este sitio</small></span><input id="paper-enabled" class="switch" type="checkbox" role="switch" disabled></label>
+<section class="notice" id="state-card" aria-live="polite" hidden>
+<div class="notice-heading"><span class="notice-dot" aria-hidden="true"></span><h3 id="status"></h3></div>
+<p id="status-detail"></p>
+<button id="permission" type="button" hidden>Allow Dropbox access</button>
+<button id="connect" type="button" hidden>Reconnect this tab</button>
 </section>
-<div class="shortcut-preview" aria-label="Ejemplo de atajo"><code>//</code><span aria-hidden="true">→</span><span class="fraction-demo"><span>a</span><span>b</span></span><p>Tu próxima ecuación,<br>en menos teclas.</p></div>
-<a class="catalog-link" href="shortcuts.html" target="_blank"><span>Ver todos los atajos</span><span class="arrow" aria-hidden="true">↗</span></a>
-<details class="help"><summary>Ayuda <span aria-hidden="true">+</span></summary><div class="help-content"><p>Abre una ecuación con <code>$$</code>. Prueba <code>sq</code>, <code>//</code> o <code>@a</code>. Tab avanza entre campos.</p>
-<details class="diagnostic"><summary>Diagnóstico <span aria-hidden="true">+</span></summary><p>Coloca el cursor en la ecuación y vuelve a abrir este panel.</p><button id="inspect" type="button">Inspeccionar campo</button><textarea id="result" aria-label="Resultado del diagnóstico" readonly rows="7"></textarea><button id="select" type="button">Seleccionar resultado</button></details>
-</div></details>
+<a class="catalog-link" href="shortcuts.html" target="_blank"><span>Keyboard shortcuts</span><span aria-hidden="true">↗</span></a>
+<details class="help"><summary>Troubleshooting <span aria-hidden="true">+</span></summary>
+<div class="help-content"><p>Open an equation with <code>$$</code>, then type a shortcut. Use Tab and Shift+Tab to move between fields.</p>
+<button id="inspect" type="button">Inspect editor</button><textarea id="result" aria-label="Diagnostic report" readonly rows="7"></textarea><button id="select" type="button">Select report</button></div>
+</details>
 </main>
-<footer><span title="Tus ecuaciones no se guardan ni se envían">LOCAL. PRIVADO.</span><span id="version" class="version"></span></footer>
 <script src="popup.js"></script>
 </body></html>

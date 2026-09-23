@@ -1,0 +1,21 @@
+{
+  "version": {
+    "license": "MIT",
+    "approval_notes": "See docs/release/REVIEWER_NOTES.md in the source archive. The extension edits only Dropbox Paper native equation inputs. Shortcut processing is local; no document content is transmitted. The mk/dm prose entry shortcuts are experimental."
+  },
+  "categories": {
+    "firefox": [
+      "other"
+    ]
+  },
+  "summary": {
+    "en-US": "Write LaTeX faster in Dropbox Paper with keyboard shortcuts."
+  },
+  "homepage": {
+    "en-US": "https://github.com/jadrk040507/latex-para-paper"
+  },
+  "support_url": {
+    "en-US": "https://github.com/jadrk040507/latex-para-paper/issues"
+  },
+  "requires_payment": false
+}
