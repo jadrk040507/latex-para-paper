@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "LaTeX para Paper",
+  "version": "0.4.5",
+  "description": "LaTeX typing shortcuts inside Dropbox Paper equations.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_title": "LaTeX para Paper",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon-16.png",
+      "32": "icon-32.png"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "paper-equation-inspector@latex-suite.local",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.dropbox.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon-48.png",
+    "96": "icon-96.png"
+  },
+  "optional_host_permissions": [
+    "https://www.dropbox.com/*"
+  ]
+}

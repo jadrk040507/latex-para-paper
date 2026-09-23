@@ -1,0 +1,27 @@
+{
+  "name": "firefox-paper-latex-probe",
+  "version": "0.4.5",
+  "private": true,
+  "type": "module",
+  "description": "Feasibility probe for direct LaTeX snippet editing in Dropbox Paper on Firefox",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build:diagnostic": "node scripts/build-diagnostic.mjs",
+    "build:probe": "node scripts/build-diagnostic.mjs",
+    "build:smoke": "esbuild scripts/firefox-smoke-entry.ts --bundle --format=iife --outfile=dist/firefox-smoke.js",
+    "package:release": "python3 scripts/package-release.py"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@types/firefox-webext-browser": "^143.0.0",
+    "@types/jsdom": "^30.0.0",
+    "esbuild": "^0.28.2",
+    "jsdom": "^30.1.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1",
+    "web-ext": "^10.7.0"
+  }
+}

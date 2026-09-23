@@ -1,0 +1,1445 @@
+[
+  {
+    "trigger": "mk",
+    "replacement": "${}$0{}$",
+    "options": "tA",
+    "id": 0,
+    "regex": false
+  },
+  {
+    "trigger": "mk",
+    "replacement": "\\($0\\)",
+    "options": "TA",
+    "id": 1,
+    "regex": false
+  },
+  {
+    "trigger": "dm",
+    "replacement": "$$\n$0\n$$",
+    "options": "tAw",
+    "description": "Display Math on empty line",
+    "id": 2,
+    "regex": false
+  },
+  {
+    "trigger": "(\\S[ \\t]*)dm",
+    "replacement": "[[0]]\n$$\n$0\n$$",
+    "options": "tAw",
+    "priority": 1,
+    "description": "Display Math on line with text",
+    "id": 3,
+    "regex": true
+  },
+  {
+    "trigger": "([^\\\\\\w])beg",
+    "replacement": "[[0]]\\begin{$0}\n$1\n\\end{$0}",
+    "options": "MA",
+    "id": 4,
+    "regex": true
+  },
+  {
+    "trigger": "([^\\\\\\w])beg",
+    "replacement": "[[0]]\\begin{$0} $1 \\end{$0}",
+    "options": "nA",
+    "id": 5,
+    "regex": true
+  },
+  {
+    "trigger": "@a",
+    "replacement": "\\alpha",
+    "options": "mA",
+    "id": 6,
+    "regex": false
+  },
+  {
+    "trigger": "@b",
+    "replacement": "\\beta",
+    "options": "mA",
+    "id": 7,
+    "regex": false
+  },
+  {
+    "trigger": "@g",
+    "replacement": "\\gamma",
+    "options": "mA",
+    "id": 8,
+    "regex": false
+  },
+  {
+    "trigger": "@G",
+    "replacement": "\\Gamma",
+    "options": "mA",
+    "id": 9,
+    "regex": false
+  },
+  {
+    "trigger": "@d",
+    "replacement": "\\delta",
+    "options": "mA",
+    "id": 10,
+    "regex": false
+  },
+  {
+    "trigger": "@D",
+    "replacement": "\\Delta",
+    "options": "mA",
+    "id": 11,
+    "regex": false
+  },
+  {
+    "trigger": "@e",
+    "replacement": "\\epsilon",
+    "options": "mA",
+    "id": 12,
+    "regex": false
+  },
+  {
+    "trigger": ":e",
+    "replacement": "\\varepsilon",
+    "options": "mA",
+    "id": 13,
+    "regex": false
+  },
+  {
+    "trigger": "@z",
+    "replacement": "\\zeta",
+    "options": "mA",
+    "id": 14,
+    "regex": false
+  },
+  {
+    "trigger": "@t",
+    "replacement": "\\theta",
+    "options": "mA",
+    "id": 15,
+    "regex": false
+  },
+  {
+    "trigger": "@T",
+    "replacement": "\\Theta",
+    "options": "mA",
+    "id": 16,
+    "regex": false
+  },
+  {
+    "trigger": ":t",
+    "replacement": "\\vartheta",
+    "options": "mA",
+    "id": 17,
+    "regex": false
+  },
+  {
+    "trigger": "@i",
+    "replacement": "\\iota",
+    "options": "mA",
+    "id": 18,
+    "regex": false
+  },
+  {
+    "trigger": "@k",
+    "replacement": "\\kappa",
+    "options": "mA",
+    "id": 19,
+    "regex": false
+  },
+  {
+    "trigger": "@l",
+    "replacement": "\\lambda",
+    "options": "mA",
+    "id": 20,
+    "regex": false
+  },
+  {
+    "trigger": "@L",
+    "replacement": "\\Lambda",
+    "options": "mA",
+    "id": 21,
+    "regex": false
+  },
+  {
+    "trigger": "@s",
+    "replacement": "\\sigma",
+    "options": "mA",
+    "id": 22,
+    "regex": false
+  },
+  {
+    "trigger": "@S",
+    "replacement": "\\Sigma",
+    "options": "mA",
+    "id": 23,
+    "regex": false
+  },
+  {
+    "trigger": "@u",
+    "replacement": "\\upsilon",
+    "options": "mA",
+    "id": 24,
+    "regex": false
+  },
+  {
+    "trigger": "@U",
+    "replacement": "\\Upsilon",
+    "options": "mA",
+    "id": 25,
+    "regex": false
+  },
+  {
+    "trigger": "@o",
+    "replacement": "\\omega",
+    "options": "mA",
+    "id": 26,
+    "regex": false
+  },
+  {
+    "trigger": "@O",
+    "replacement": "\\Omega",
+    "options": "mA",
+    "id": 27,
+    "regex": false
+  },
+  {
+    "trigger": "ome",
+    "replacement": "\\omega",
+    "options": "mA",
+    "id": 28,
+    "regex": false
+  },
+  {
+    "trigger": "Ome",
+    "replacement": "\\Omega",
+    "options": "mA",
+    "id": 29,
+    "regex": false
+  },
+  {
+    "trigger": "\\n\\s*\\\"",
+    "replacement": "\n\\text{$0 } $1",
+    "options": "mrA",
+    "id": 30,
+    "regex": true
+  },
+  {
+    "trigger": "text",
+    "replacement": "\\text{$0}$1",
+    "options": "mA",
+    "priority": -1,
+    "id": 31,
+    "regex": false
+  },
+  {
+    "trigger": "\"",
+    "replacement": "\\text{$0}$1",
+    "options": "mA",
+    "priority": -1,
+    "id": 32,
+    "regex": false
+  },
+  {
+    "trigger": "sr",
+    "replacement": "^{2}",
+    "options": "mA",
+    "id": 33,
+    "regex": false
+  },
+  {
+    "trigger": "cb",
+    "replacement": "^{3}",
+    "options": "mA",
+    "id": 34,
+    "regex": false
+  },
+  {
+    "trigger": "rd",
+    "replacement": "^{$0}$1",
+    "options": "mA",
+    "description": "Raise to (D)the power of",
+    "id": 35,
+    "regex": false
+  },
+  {
+    "trigger": "_",
+    "replacement": "_{$0}$1",
+    "options": "mA",
+    "id": 36,
+    "regex": false
+  },
+  {
+    "trigger": "sts",
+    "replacement": "_\\text{$0}",
+    "options": "mA",
+    "id": 37,
+    "regex": false
+  },
+  {
+    "trigger": "sq",
+    "replacement": "\\sqrt{ $0 }$1",
+    "options": "mA",
+    "id": 38,
+    "regex": false
+  },
+  {
+    "trigger": "(\\d)rt",
+    "replacement": "\\sqrt[[[0]]]{ $0 }$1",
+    "options": "mA",
+    "description": "Nth RooT",
+    "id": 39,
+    "regex": true
+  },
+  {
+    "trigger": "//",
+    "replacement": "\\frac{$0}{$1}$2",
+    "options": "mA",
+    "id": 40,
+    "regex": false
+  },
+  {
+    "trigger": "\\bee",
+    "replacement": "e^{ $0 }$1",
+    "options": "mA",
+    "id": 41,
+    "regex": true
+  },
+  {
+    "trigger": "invs",
+    "replacement": "^{-1}",
+    "options": "mA",
+    "id": 42,
+    "regex": false
+  },
+  {
+    "trigger": "([^\\\\])(exp|log|ln)",
+    "replacement": "[[0]]\\[[1]]",
+    "options": "rmA",
+    "id": 43,
+    "regex": true
+  },
+  {
+    "trigger": "conj",
+    "replacement": "^{*}",
+    "options": "mA",
+    "id": 44,
+    "regex": false
+  },
+  {
+    "trigger": "Re",
+    "replacement": "\\mathrm{Re}",
+    "options": "mA",
+    "id": 45,
+    "regex": false
+  },
+  {
+    "trigger": "Im",
+    "replacement": "\\mathrm{Im}",
+    "options": "mA",
+    "id": 46,
+    "regex": false
+  },
+  {
+    "trigger": "bf",
+    "replacement": "\\mathbf{$0}",
+    "options": "mA",
+    "id": 47,
+    "regex": false
+  },
+  {
+    "trigger": "rm",
+    "replacement": "\\mathrm{$0}$1",
+    "options": "mA",
+    "id": 48,
+    "regex": false
+  },
+  {
+    "trigger": "([^\\\\])(det)",
+    "replacement": "[[0]]\\[[1]]",
+    "options": "rmA",
+    "id": 49,
+    "regex": true
+  },
+  {
+    "trigger": "trace",
+    "replacement": "\\mathrm{Tr}",
+    "options": "mA",
+    "id": 50,
+    "regex": false
+  },
+  {
+    "trigger": "([a-zA-Z])hat",
+    "replacement": "\\hat{[[0]]}",
+    "options": "rmA",
+    "id": 51,
+    "regex": true
+  },
+  {
+    "trigger": "([a-zA-Z])bar",
+    "replacement": "\\bar{[[0]]}",
+    "options": "rmA",
+    "id": 52,
+    "regex": true
+  },
+  {
+    "trigger": "([a-zA-Z])dot",
+    "replacement": "\\dot{[[0]]}",
+    "options": "rmA",
+    "priority": -1,
+    "id": 53,
+    "regex": true
+  },
+  {
+    "trigger": "([a-zA-Z])ddot",
+    "replacement": "\\ddot{[[0]]}",
+    "options": "rmA",
+    "priority": 1,
+    "id": 54,
+    "regex": true
+  },
+  {
+    "trigger": "([a-zA-Z])tilde",
+    "replacement": "\\tilde{[[0]]}",
+    "options": "rmA",
+    "id": 55,
+    "regex": true
+  },
+  {
+    "trigger": "([a-zA-Z])und",
+    "replacement": "\\underline{[[0]]}",
+    "options": "rmA",
+    "id": 56,
+    "regex": true
+  },
+  {
+    "trigger": "([a-zA-Z])vec",
+    "replacement": "\\vec{[[0]]}",
+    "options": "rmA",
+    "id": 57,
+    "regex": true
+  },
+  {
+    "trigger": "([a-zA-Z]),\\.",
+    "replacement": "\\mathbf{[[0]]}",
+    "options": "rmA",
+    "id": 58,
+    "regex": true
+  },
+  {
+    "trigger": "([a-zA-Z])\\.,",
+    "replacement": "\\mathbf{[[0]]}",
+    "options": "rmA",
+    "id": 59,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${GREEK}),\\.",
+    "replacement": "\\boldsymbol{\\[[0]]}",
+    "options": "rmA",
+    "id": 60,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${GREEK})\\.,",
+    "replacement": "\\boldsymbol{\\[[0]]}",
+    "options": "rmA",
+    "id": 61,
+    "regex": true
+  },
+  {
+    "trigger": "hat",
+    "replacement": "\\hat{$0}$1",
+    "options": "mA",
+    "id": 62,
+    "regex": false
+  },
+  {
+    "trigger": "bar",
+    "replacement": "\\bar{$0}$1",
+    "options": "mA",
+    "id": 63,
+    "regex": false
+  },
+  {
+    "trigger": "dot",
+    "replacement": "\\dot{$0}$1",
+    "options": "mA",
+    "priority": -1,
+    "id": 64,
+    "regex": false
+  },
+  {
+    "trigger": "ddot",
+    "replacement": "\\ddot{$0}$1",
+    "options": "mA",
+    "id": 65,
+    "regex": false
+  },
+  {
+    "trigger": "cdot",
+    "replacement": "\\cdot",
+    "options": "mA",
+    "id": 66,
+    "regex": false
+  },
+  {
+    "trigger": "tilde",
+    "replacement": "\\tilde{$0}$1",
+    "options": "mA",
+    "id": 67,
+    "regex": false
+  },
+  {
+    "trigger": "und",
+    "replacement": "\\underline{$0}$1",
+    "options": "mA",
+    "id": 68,
+    "regex": false
+  },
+  {
+    "trigger": "vec",
+    "replacement": "\\vec{$0}$1",
+    "options": "mA",
+    "id": 69,
+    "regex": false
+  },
+  {
+    "trigger": "pmod",
+    "replacement": "\\pmod{${0:n}}$1",
+    "options": "mA",
+    "description": "Parenthesized modulo (\\pmod{n})",
+    "id": 70,
+    "regex": false
+  },
+  {
+    "trigger": "(\\\\?)([A-Za-z]+)(\\d)",
+    "replacement": null,
+    "options": "rmA",
+    "priority": -1,
+    "excludedMacros": [
+      "pu",
+      "ce"
+    ],
+    "description": "Auto letter subscript for variables and greek letters, add space after other macros",
+    "id": 71,
+    "regex": true,
+    "dynamic": "Auto letter subscript for variables and greek letters, add space after other macros"
+  },
+  {
+    "trigger": "(\\\\${GREEK}|[A-Za-z])_{(\\d+)}(\\d)",
+    "replacement": "[[0]]_{[[1]][[2]]}",
+    "options": "rmA",
+    "priority": -1,
+    "description": "Combine subscripts for variables and greek letters",
+    "id": 72,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${ACCENT})\\{(\\\\${GREEK}|[A-Za-z])\\}(?:_\\{(\\d+)\\})?(\\d)",
+    "replacement": "\\[[0]]{[[1]]}_{[[2]][[3]]}",
+    "options": "rmA",
+    "priority": -1,
+    "id": 73,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${ACCENT})\\{\\\\(${ACCENT})\\{(\\\\${GREEK}|[A-Za-z])\\}\\}(?:_\\{(\\d+)\\})?(\\d)",
+    "replacement": "\\[[0]]{\\[[1]]{[[2]]}}_{[[3]][[4]]}",
+    "options": "rmA",
+    "priority": -1,
+    "id": 74,
+    "regex": true
+  },
+  {
+    "trigger": "xnn",
+    "replacement": "x_{n}",
+    "options": "mA",
+    "id": 75,
+    "regex": false
+  },
+  {
+    "trigger": "\\xii",
+    "replacement": "x_{i}",
+    "options": "mA",
+    "priority": 1,
+    "id": 76,
+    "regex": false
+  },
+  {
+    "trigger": "xjj",
+    "replacement": "x_{j}",
+    "options": "mA",
+    "id": 77,
+    "regex": false
+  },
+  {
+    "trigger": "xp1",
+    "replacement": "x_{n+1}",
+    "options": "mA",
+    "id": 78,
+    "regex": false
+  },
+  {
+    "trigger": "ynn",
+    "replacement": "y_{n}",
+    "options": "mA",
+    "id": 79,
+    "regex": false
+  },
+  {
+    "trigger": "yii",
+    "replacement": "y_{i}",
+    "options": "mA",
+    "id": 80,
+    "regex": false
+  },
+  {
+    "trigger": "yjj",
+    "replacement": "y_{j}",
+    "options": "mA",
+    "id": 81,
+    "regex": false
+  },
+  {
+    "trigger": "ooo",
+    "replacement": "\\infty",
+    "options": "mA",
+    "id": 82,
+    "regex": false
+  },
+  {
+    "trigger": "sum",
+    "replacement": "\\sum",
+    "options": "mA",
+    "id": 83,
+    "regex": false
+  },
+  {
+    "trigger": "prod",
+    "replacement": "\\prod",
+    "options": "mA",
+    "id": 84,
+    "regex": false
+  },
+  {
+    "trigger": "\\sum",
+    "replacement": "\\sum_{${0:i}=${1:1}}^{${2:N}} $3",
+    "options": "m",
+    "id": 85,
+    "regex": false
+  },
+  {
+    "trigger": "\\prod",
+    "replacement": "\\prod_{${0:i}=${1:1}}^{${2:N}} $3",
+    "options": "m",
+    "id": 86,
+    "regex": false
+  },
+  {
+    "trigger": "lim",
+    "replacement": "\\lim_{ ${0:n} \\to ${1:\\infty} } $2",
+    "options": "mA",
+    "id": 87,
+    "regex": false
+  },
+  {
+    "trigger": "+-",
+    "replacement": "\\pm",
+    "options": "mA",
+    "id": 88,
+    "regex": false
+  },
+  {
+    "trigger": "-+",
+    "replacement": "\\mp",
+    "options": "mA",
+    "id": 89,
+    "regex": false
+  },
+  {
+    "trigger": "...",
+    "replacement": "\\dots",
+    "options": "mA",
+    "id": 90,
+    "regex": false
+  },
+  {
+    "trigger": "nabl",
+    "replacement": "\\nabla",
+    "options": "mA",
+    "id": 91,
+    "regex": false
+  },
+  {
+    "trigger": "xx",
+    "replacement": "\\times",
+    "options": "mA",
+    "id": 92,
+    "regex": false
+  },
+  {
+    "trigger": "**",
+    "replacement": "\\cdot",
+    "options": "mA",
+    "id": 93,
+    "regex": false
+  },
+  {
+    "trigger": "para",
+    "replacement": "\\parallel",
+    "options": "mA",
+    "id": 94,
+    "regex": false
+  },
+  {
+    "trigger": "deg",
+    "replacement": "\\degree",
+    "options": "mA",
+    "id": 95,
+    "regex": false
+  },
+  {
+    "trigger": "===",
+    "replacement": "\\equiv",
+    "options": "mA",
+    "id": 96,
+    "regex": false
+  },
+  {
+    "trigger": "!=",
+    "replacement": "\\neq",
+    "options": "mA",
+    "id": 97,
+    "regex": false
+  },
+  {
+    "trigger": ">=",
+    "replacement": "\\geq",
+    "options": "mA",
+    "id": 98,
+    "regex": false
+  },
+  {
+    "trigger": "<=",
+    "replacement": "\\leq",
+    "options": "mA",
+    "id": 99,
+    "regex": false
+  },
+  {
+    "trigger": ">>",
+    "replacement": "\\gg",
+    "options": "mA",
+    "id": 100,
+    "regex": false
+  },
+  {
+    "trigger": "<<",
+    "replacement": "\\ll",
+    "options": "mA",
+    "id": 101,
+    "regex": false
+  },
+  {
+    "trigger": "simm",
+    "replacement": "\\sim",
+    "options": "mA",
+    "id": 102,
+    "regex": false
+  },
+  {
+    "trigger": "sim=",
+    "replacement": "\\simeq",
+    "options": "mA",
+    "id": 103,
+    "regex": false
+  },
+  {
+    "trigger": "prop",
+    "replacement": "\\propto",
+    "options": "mA",
+    "id": 104,
+    "regex": false
+  },
+  {
+    "trigger": "<->",
+    "replacement": "\\leftrightarrow ",
+    "options": "mA",
+    "id": 105,
+    "regex": false
+  },
+  {
+    "trigger": "->",
+    "replacement": "\\to",
+    "options": "mA",
+    "excludedMacros": [
+      "ce"
+    ],
+    "id": 106,
+    "regex": false
+  },
+  {
+    "trigger": "!>",
+    "replacement": "\\mapsto",
+    "options": "mA",
+    "id": 107,
+    "regex": false
+  },
+  {
+    "trigger": "=>",
+    "replacement": "\\implies",
+    "options": "mA",
+    "id": 108,
+    "regex": false
+  },
+  {
+    "trigger": "=<",
+    "replacement": "\\impliedby",
+    "options": "mA",
+    "id": 109,
+    "regex": false
+  },
+  {
+    "trigger": "and",
+    "replacement": "\\cap",
+    "options": "wmA",
+    "id": 110,
+    "regex": false
+  },
+  {
+    "trigger": "orr",
+    "replacement": "\\cup",
+    "options": "mA",
+    "id": 111,
+    "regex": false
+  },
+  {
+    "trigger": "inn",
+    "replacement": "\\in",
+    "options": "mA",
+    "id": 112,
+    "regex": false
+  },
+  {
+    "trigger": "notin",
+    "replacement": "\\not\\in",
+    "options": "mA",
+    "id": 113,
+    "regex": false
+  },
+  {
+    "trigger": "\\\\\\",
+    "replacement": "\\setminus",
+    "options": "mA",
+    "id": 114,
+    "regex": false
+  },
+  {
+    "trigger": "sub=",
+    "replacement": "\\subseteq",
+    "options": "mA",
+    "id": 115,
+    "regex": false
+  },
+  {
+    "trigger": "sup=",
+    "replacement": "\\supseteq",
+    "options": "mA",
+    "id": 116,
+    "regex": false
+  },
+  {
+    "trigger": "eset",
+    "replacement": "\\emptyset",
+    "options": "mA",
+    "id": 117,
+    "regex": false
+  },
+  {
+    "trigger": "set",
+    "replacement": "\\{ $0 \\}$1",
+    "options": "wmA",
+    "id": 118,
+    "regex": false
+  },
+  {
+    "trigger": "(n?)e\\\\xi sts",
+    "replacement": "\\[[0]]exists",
+    "options": "mA",
+    "priority": 1,
+    "id": 119,
+    "regex": true
+  },
+  {
+    "trigger": "LL",
+    "replacement": "\\mathcal{L}",
+    "options": "mA",
+    "id": 120,
+    "regex": false
+  },
+  {
+    "trigger": "HH",
+    "replacement": "\\mathcal{H}",
+    "options": "mA",
+    "id": 121,
+    "regex": false
+  },
+  {
+    "trigger": "CC",
+    "replacement": "\\mathbb{C}",
+    "options": "mA",
+    "id": 122,
+    "regex": false
+  },
+  {
+    "trigger": "RR",
+    "replacement": "\\mathbb{R}",
+    "options": "mA",
+    "id": 123,
+    "regex": false
+  },
+  {
+    "trigger": "ZZ",
+    "replacement": "\\mathbb{Z}",
+    "options": "mA",
+    "id": 124,
+    "regex": false
+  },
+  {
+    "trigger": "NN",
+    "replacement": "\\mathbb{N}",
+    "options": "mA",
+    "id": 125,
+    "regex": false
+  },
+  {
+    "trigger": "QQ",
+    "replacement": "\\mathbb{Q}",
+    "options": "mA",
+    "id": 126,
+    "regex": false
+  },
+  {
+    "trigger": "([^\\\\])(${GREEK})",
+    "replacement": "[[0]]\\[[1]]",
+    "options": "rmA",
+    "description": "Add backslash before Greek letters",
+    "id": 127,
+    "regex": true
+  },
+  {
+    "trigger": "([^\\\\])(${SYMBOL})",
+    "replacement": "[[0]]\\[[1]]",
+    "options": "rmA",
+    "description": "Add backslash before symbols",
+    "id": 128,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${GREEK}|${SYMBOL}) sr",
+    "replacement": "\\[[0]]^{2}",
+    "options": "rmA",
+    "id": 129,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${GREEK}|${SYMBOL}) cb",
+    "replacement": "\\[[0]]^{3}",
+    "options": "rmA",
+    "id": 130,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${GREEK}|${SYMBOL}) rd",
+    "replacement": "\\[[0]]^{$0}$1",
+    "options": "rmA",
+    "id": 131,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${GREEK}) hat",
+    "replacement": "\\hat{\\[[0]]}",
+    "options": "rmA",
+    "id": 132,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${GREEK}) dot",
+    "replacement": "\\dot{\\[[0]]}",
+    "options": "rmA",
+    "id": 133,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${GREEK}) bar",
+    "replacement": "\\bar{\\[[0]]}",
+    "options": "rmA",
+    "id": 134,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${GREEK}) vec",
+    "replacement": "\\vec{\\[[0]]}",
+    "options": "rmA",
+    "id": 135,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${GREEK}) tilde",
+    "replacement": "\\tilde{\\[[0]]}",
+    "options": "rmA",
+    "id": 136,
+    "regex": true
+  },
+  {
+    "trigger": "\\\\(${GREEK}) und",
+    "replacement": "\\underline{\\[[0]]}",
+    "options": "rmA",
+    "id": 137,
+    "regex": true
+  },
+  {
+    "trigger": "par",
+    "replacement": "\\frac{ \\partial ${0:y} }{ \\partial ${1:x} } $2",
+    "options": "m",
+    "id": 138,
+    "regex": false
+  },
+  {
+    "trigger": "par([0-9])",
+    "replacement": "\\frac{ \\partial^{[[0]]} ${0:y} }{ \\partial ${1:x}^{[[0]]} } $2",
+    "options": "mA",
+    "id": 139,
+    "regex": true
+  },
+  {
+    "trigger": "parn",
+    "replacement": "\\frac{ \\partial^{${0:n}} ${1:y} }{ \\partial ${2:x}^{${0:n}} } $2",
+    "options": "mA",
+    "id": 140,
+    "regex": true
+  },
+  {
+    "trigger": "pa([A-Za-z])([A-Za-z])",
+    "replacement": "\\frac{ \\partial [[0]] }{ \\partial [[1]] } ",
+    "options": "rm",
+    "id": 141,
+    "regex": true
+  },
+  {
+    "trigger": "ddt",
+    "replacement": "\\frac{d}{dt} ",
+    "options": "mA",
+    "id": 142,
+    "regex": false
+  },
+  {
+    "trigger": "([^\\\\])int",
+    "replacement": "[[0]]\\int",
+    "options": "mA",
+    "priority": -1,
+    "id": 143,
+    "regex": true
+  },
+  {
+    "trigger": "\\int",
+    "replacement": "\\int $0 \\, d${1:x} $2",
+    "options": "m",
+    "id": 144,
+    "regex": false
+  },
+  {
+    "trigger": "dint",
+    "replacement": "\\int_{${0:0}}^{${1:1}} $2 \\, d${3:x} $4",
+    "options": "mA",
+    "description": "Definite integral",
+    "id": 145,
+    "regex": false
+  },
+  {
+    "trigger": "oint",
+    "replacement": "\\oint",
+    "options": "mA",
+    "id": 146,
+    "regex": false
+  },
+  {
+    "trigger": "iint",
+    "replacement": "\\iint",
+    "options": "mA",
+    "id": 147,
+    "regex": false
+  },
+  {
+    "trigger": "iiint",
+    "replacement": "\\iiint",
+    "options": "mA",
+    "id": 148,
+    "regex": false
+  },
+  {
+    "trigger": "oinf",
+    "replacement": "\\int_{0}^{\\infty} $0 \\, d${1:x} $2",
+    "options": "mA",
+    "id": 149,
+    "regex": false
+  },
+  {
+    "trigger": "infi",
+    "replacement": "\\int_{-\\infty}^{\\infty} $0 \\, d${1:x} $2",
+    "options": "mA",
+    "id": 150,
+    "regex": false
+  },
+  {
+    "trigger": "([^\\\\])(arcsin|sin|arccos|cos|arctan|tan|csc|sec|cot)",
+    "replacement": "[[0]]\\[[1]]",
+    "options": "rmA",
+    "description": "Add backslash before trig funcs",
+    "id": 151,
+    "regex": true
+  },
+  {
+    "trigger": "(arccsc|arcsec|arccot)",
+    "replacement": "\\operatorname{[[0]]}$0",
+    "options": "mA",
+    "description": "Inverse trig functions, Are not built-in MathJax functions",
+    "priority": 1,
+    "id": 152,
+    "regex": true
+  },
+  {
+    "trigger": "U",
+    "replacement": "\\underbrace{ ${VISUAL} }_{ $0 }",
+    "options": "mv",
+    "id": 153,
+    "regex": false
+  },
+  {
+    "trigger": "O",
+    "replacement": "\\overbrace{ ${VISUAL} }^{ $0 }",
+    "options": "mv",
+    "id": 154,
+    "regex": false
+  },
+  {
+    "trigger": "B",
+    "replacement": "\\underset{ $0 }{ ${VISUAL} }",
+    "options": "mv",
+    "id": 155,
+    "regex": false
+  },
+  {
+    "trigger": "C",
+    "replacement": "\\cancel{ ${VISUAL} }",
+    "options": "mv",
+    "id": 156,
+    "regex": false
+  },
+  {
+    "trigger": "K",
+    "replacement": "\\cancelto{ $0 }{ ${VISUAL} }",
+    "options": "mv",
+    "id": 157,
+    "regex": false
+  },
+  {
+    "trigger": "S",
+    "replacement": "\\sqrt{ ${VISUAL} }",
+    "options": "mv",
+    "id": 158,
+    "regex": false
+  },
+  {
+    "trigger": "kbt",
+    "replacement": "k_{B}T",
+    "options": "mA",
+    "id": 159,
+    "regex": false
+  },
+  {
+    "trigger": "msun",
+    "replacement": "M_{\\odot}",
+    "options": "mA",
+    "id": 160,
+    "regex": false
+  },
+  {
+    "trigger": "dag",
+    "replacement": "^{\\dagger}",
+    "options": "mA",
+    "id": 161,
+    "regex": false
+  },
+  {
+    "trigger": "o+",
+    "replacement": "\\oplus ",
+    "options": "mA",
+    "id": 162,
+    "regex": false
+  },
+  {
+    "trigger": "ox",
+    "replacement": "\\otimes ",
+    "options": "wmA",
+    "id": 163,
+    "regex": false
+  },
+  {
+    "trigger": "bra",
+    "replacement": "\\bra{$0} $1",
+    "options": "mA",
+    "id": 164,
+    "regex": false
+  },
+  {
+    "trigger": "ket",
+    "replacement": "\\ket{$0} $1",
+    "options": "mA",
+    "id": 165,
+    "regex": false
+  },
+  {
+    "trigger": "brk",
+    "replacement": "\\braket{ $0 | $1 } $2",
+    "options": "mA",
+    "id": 166,
+    "regex": false
+  },
+  {
+    "trigger": "outer",
+    "replacement": "\\ket{${0:\\psi}} \\bra{${0:\\psi}} $1",
+    "options": "mA",
+    "id": 167,
+    "regex": false
+  },
+  {
+    "trigger": "pu",
+    "replacement": "\\pu{ $0 }",
+    "options": "mA",
+    "id": 168,
+    "regex": false
+  },
+  {
+    "trigger": "cee",
+    "replacement": "\\ce{ $0 }",
+    "options": "mA",
+    "id": 169,
+    "regex": false
+  },
+  {
+    "trigger": "he4",
+    "replacement": "{}^{4}_{2}He ",
+    "options": "mA",
+    "id": 170,
+    "regex": false
+  },
+  {
+    "trigger": "he3",
+    "replacement": "{}^{3}_{2}He ",
+    "options": "mA",
+    "id": 171,
+    "regex": false
+  },
+  {
+    "trigger": "iso",
+    "replacement": "{}^{${0:4}}_{${1:2}}${2:He}",
+    "options": "mA",
+    "id": 172,
+    "regex": false
+  },
+  {
+    "trigger": "([pbBvV]mat)",
+    "replacement": "\\begin{[[0]]rix}\n$0\n\\end{[[0]]rix}",
+    "options": "rMA",
+    "description": "Matrix environments with new lines",
+    "id": 173,
+    "regex": true
+  },
+  {
+    "trigger": "(matrix|cases|align|array)",
+    "replacement": "\\begin{[[0]]}\n$0\n\\end{[[0]]}",
+    "options": "rMA",
+    "description": "Miscellaneous environments with new lines",
+    "id": 174,
+    "regex": true
+  },
+  {
+    "trigger": "([pbBvV]mat)",
+    "replacement": "\\begin{[[0]]rix}$0\\end{[[0]]rix}",
+    "options": "rnA",
+    "id": 175,
+    "regex": true
+  },
+  {
+    "trigger": "(matrix|cases|align|array)",
+    "replacement": "\\begin{[[0]]}$0\\end{[[0]]}",
+    "options": "rnA",
+    "id": 176,
+    "regex": true
+  },
+  {
+    "trigger": "avg",
+    "replacement": "\\langle $0 \\rangle $1",
+    "options": "mA",
+    "id": 177,
+    "regex": false
+  },
+  {
+    "trigger": "norm",
+    "replacement": "\\lvert $0 \\rvert $1",
+    "options": "mA",
+    "priority": 1,
+    "id": 178,
+    "regex": false
+  },
+  {
+    "trigger": "Norm",
+    "replacement": "\\lVert $0 \\rVert $1",
+    "options": "mA",
+    "priority": 1,
+    "id": 179,
+    "regex": false
+  },
+  {
+    "trigger": "ceil",
+    "replacement": "\\lceil $0 \\rceil $1",
+    "options": "mA",
+    "id": 180,
+    "regex": false
+  },
+  {
+    "trigger": "floor",
+    "replacement": "\\lfloor $0 \\rfloor $1",
+    "options": "mA",
+    "id": 181,
+    "regex": false
+  },
+  {
+    "trigger": "mod",
+    "replacement": "|$0|$1",
+    "options": "mA",
+    "id": 182,
+    "regex": false
+  },
+  {
+    "trigger": "(",
+    "replacement": "(${VISUAL})",
+    "options": "mv",
+    "id": 183,
+    "regex": false
+  },
+  {
+    "trigger": "[",
+    "replacement": "[${VISUAL}]",
+    "options": "mv",
+    "id": 184,
+    "regex": false
+  },
+  {
+    "trigger": "{",
+    "replacement": "{${VISUAL}}",
+    "options": "mv",
+    "id": 185,
+    "regex": false
+  },
+  {
+    "trigger": "(",
+    "replacement": "($0)$1",
+    "options": "mA",
+    "id": 186,
+    "regex": false
+  },
+  {
+    "trigger": "{",
+    "replacement": "{$0}$1",
+    "options": "mA",
+    "id": 187,
+    "regex": false
+  },
+  {
+    "trigger": "[",
+    "replacement": "[$0]$1",
+    "options": "mA",
+    "id": 188,
+    "regex": false
+  },
+  {
+    "trigger": "lr(",
+    "replacement": "\\left( $0 \\right) $1",
+    "options": "mA",
+    "id": 189,
+    "regex": false
+  },
+  {
+    "trigger": "lr{",
+    "replacement": "\\left\\{ $0 \\right\\} $1",
+    "options": "mA",
+    "id": 190,
+    "regex": false
+  },
+  {
+    "trigger": "lr[",
+    "replacement": "\\left[ $0 \\right] $1",
+    "options": "mA",
+    "id": 191,
+    "regex": false
+  },
+  {
+    "trigger": "lr|",
+    "replacement": "\\left| $0 \\right| $1",
+    "options": "mA",
+    "id": 192,
+    "regex": false
+  },
+  {
+    "trigger": "lra",
+    "replacement": "\\left< $0 \\right> $1",
+    "options": "mA",
+    "id": 193,
+    "regex": false
+  },
+  {
+    "trigger": "\\\\[A-Za-z]{2,}",
+    "replacement": null,
+    "options": "mAU",
+    "priority": 3,
+    "description": "Disable snippets while typing macros",
+    "id": 194,
+    "regex": true,
+    "dynamic": "Disable snippets while typing macros"
+  },
+  {
+    "trigger": "\\\\[A-Za-z]{2,}",
+    "replacement": null,
+    "options": "mA",
+    "priority": 3,
+    "description": "Insert space after macros if not part of another macro",
+    "id": 195,
+    "regex": true,
+    "dynamic": "Insert space after macros if not part of another macro"
+  },
+  {
+    "trigger": "tayl",
+    "replacement": "${0:f}(${1:x} + ${2:h}) = ${0:f}(${1:x}) + ${0:f}'(${1:x})${2:h} + ${0:f}''(${1:x}) \\frac{${2:h}^{2}}{2!} + \\dots$3",
+    "options": "mA",
+    "description": "Taylor expansion",
+    "id": 196,
+    "regex": false
+  },
+  {
+    "trigger": "iden(\\d)",
+    "replacement": null,
+    "options": "mA",
+    "description": "N x N identity matrix",
+    "id": 197,
+    "regex": true,
+    "dynamic": "N x N identity matrix"
+  },
+  {
+    "trigger": "(?<positive_lookbehind>(?:\\n|^)[ \\t]*>*)(?<marker>\\d+[.)]|[-*+])(?<whitespace>[ \\t]+)(?<text>.*)dm",
+    "replacement": null,
+    "options": "rtA",
+    "priority": 2,
+    "description": "Display math when in a list",
+    "id": 198,
+    "regex": true,
+    "dynamic": "Display math when in a list"
+  }
+]

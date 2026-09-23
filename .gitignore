@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.web-ext/
+.superpowers/
+.browser-profiles/
+.worktrees/
+
+browser-profiles/
