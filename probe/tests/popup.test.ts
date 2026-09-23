@@ -18,7 +18,7 @@ async function setup(url='https://www.dropbox.com/paper/test', access=true, save
 const tick=()=>new Promise(resolve=>setTimeout(resolve,0));
 test('keeps the connected quick-settings menu minimal and English',async()=>{
  const s=await setup();expect(s.doc.querySelector<HTMLElement>('#state-card')?.hidden).toBe(true);
- expect(s.doc.documentElement.lang).toBe('en');expect(s.doc.querySelector('.section-title')?.textContent).toBe('Quick Settings');
+ expect(s.doc.documentElement.lang).toBe('en');expect(s.doc.querySelector('.section-heading h2')?.textContent).toBe('Quick Settings');
  expect(s.doc.querySelector('#status')?.textContent).not.toContain('Ready');
  expect(s.doc.body.textContent).not.toContain('Paper ·');expect(s.doc.body.textContent).not.toContain('Fewer keys');
  await s.change('#paper-enabled',false);expect(s.writes).toEqual([{paperEnabled:false}]);expect(s.doc.querySelector<HTMLElement>('#state-card')?.hidden).toBe(true);s.dom.window.close();

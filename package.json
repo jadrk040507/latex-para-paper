@@ -1,6 +1,6 @@
 {
   "name": "latex-para-paper",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "private": true,
   "type": "module",
   "description": "Firefox extension for LaTeX equation shortcuts in Dropbox Paper.",
@@ -10,7 +10,8 @@
     "build:diagnostic": "node scripts/build-diagnostic.mjs",
     "build:probe": "node scripts/build-diagnostic.mjs",
     "build:smoke": "esbuild scripts/firefox-smoke-entry.ts --bundle --format=iife --outfile=dist/firefox-smoke.js",
-    "package:release": "python3 scripts/package-release.py"
+    "package:release": "python3 scripts/package-release.py",
+    "submit:amo": "npm run build:probe && npm run package:release && python3 scripts/submit-amo.py"
   },
   "engines": {
     "node": ">=24"

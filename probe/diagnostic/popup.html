@@ -2,23 +2,35 @@
 <html lang="en">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LaTeX</title><link rel="stylesheet" href="popup.css"></head>
 <body>
-<header><img class="brand-icon" src="icon.svg" alt=""><h1>LaTeX</h1></header>
+<header>
+  <img class="brand-icon" src="icon.svg" alt="">
+  <div class="brand-name"><h1>LaTeX</h1><span class="beta-tag">BETA</span></div>
+</header>
 <main>
-<h2 class="section-title">Quick Settings</h2>
+<div class="section-heading"><h2>Quick Settings</h2></div>
 <section class="controls" aria-label="Quick Settings">
-<label class="control-row" for="enabled"><span>Shortcuts</span><input id="enabled" class="switch" type="checkbox" role="switch" disabled></label>
-<label class="control-row" for="paper-enabled"><span>Dropbox Paper</span><input id="paper-enabled" class="switch" type="checkbox" role="switch" disabled></label>
+<label class="control-row" for="enabled">
+  <span class="setting-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2.5"/><path d="M7 9h1m3 0h1m3 0h1M7 12h1m3 0h1m3 0h1M8 15h8"/></svg></span>
+  <span class="control-copy"><strong>Shortcuts</strong><small>Global</small></span>
+  <input id="enabled" class="switch" type="checkbox" role="switch" disabled>
+</label>
+<label class="control-row" for="paper-enabled">
+  <span class="setting-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.3"/></svg></span>
+  <span class="control-copy"><strong>Dropbox Paper</strong><small>www.dropbox.com</small></span>
+  <input id="paper-enabled" class="switch" type="checkbox" role="switch" disabled>
+</label>
 </section>
 <section class="notice" id="state-card" aria-live="polite" hidden>
-<div class="notice-heading"><span class="notice-dot" aria-hidden="true"></span><h3 id="status"></h3></div>
-<p id="status-detail"></p>
-<button id="permission" type="button" hidden>Allow Dropbox access</button>
-<button id="connect" type="button" hidden>Reconnect this tab</button>
+  <div class="notice-heading"><span class="notice-dot" aria-hidden="true"></span><h3 id="status"></h3></div>
+  <p id="status-detail"></p>
+  <button id="permission" type="button" hidden>Allow Dropbox access</button>
+  <button id="connect" type="button" hidden>Reconnect this tab</button>
 </section>
-<a class="catalog-link" href="shortcuts.html" target="_blank"><span>Keyboard shortcuts</span><span aria-hidden="true">↗</span></a>
-<details class="help"><summary>Troubleshooting <span aria-hidden="true">+</span></summary>
-<div class="help-content"><p>Open an equation with <code>$$</code>, then type a shortcut. Use Tab and Shift+Tab to move between fields.</p>
-<button id="inspect" type="button">Inspect editor</button><textarea id="result" aria-label="Diagnostic report" readonly rows="7"></textarea><button id="select" type="button">Select report</button></div>
+<a class="menu-link" href="shortcuts.html" target="_blank"><span class="menu-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2.2"/><path d="M7 9h.1M10 9h.1M13 9h.1M16 9h.1M7 12h.1M10 12h.1M13 12h.1M16 12h.1M8.5 15.2h7"/></svg></span><span>Keyboard shortcuts</span><span class="menu-link-arrow" aria-hidden="true">↗</span></a>
+<details class="help"><summary><span class="help-icon" aria-hidden="true">?</span><span>Troubleshooting</span><span class="expand-icon" aria-hidden="true">+</span></summary>
+  <div class="help-content"><p>Focus an equation field, then reopen this menu.</p>
+    <button id="inspect" type="button">Inspect editor</button><textarea id="result" aria-label="Diagnostic report" readonly rows="7"></textarea><button id="select" type="button">Select report</button>
+  </div>
 </details>
 </main>
 <script src="popup.js"></script>

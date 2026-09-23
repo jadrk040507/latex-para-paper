@@ -6,3 +6,5 @@ dist/
 .worktrees/
 
 browser-profiles/
+
+web-ext-artifacts/
